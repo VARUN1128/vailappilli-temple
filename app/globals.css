@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-temple-maroon: #5b1717;
+    --color-temple-dark: #241313;
+    --color-temple-gold: #c89b3c;
+    --color-temple-gold-light: #e3c878;
+    --color-temple-ivory: #fbf6e9;
+    --color-temple-sandal: #f2e8d0;
+    --color-temple-text: #30221d;
+    --color-temple-muted: #77665a;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fbf6e9;
+    color: #30221d;
+  }
+
+  body {
+    font-family: var(--font-noto-sans-malayalam), sans-serif;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-noto-serif-malayalam), serif;
+    line-height: 1.35;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #241313;
+}
+::-webkit-scrollbar-thumb {
+  background: #c89b3c;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e3c878;
+}
+
+/* Malayalam Text Drop Shadow */
+.text-drop-shadow {
+  text-shadow: 0 4px 12px rgba(36, 19, 19, 0.6);
+}
+
+/* Utility to hide scrollbars */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
