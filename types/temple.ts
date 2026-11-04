@@ -35,10 +35,12 @@ export interface Festival {
 
 export interface Vazhipadu {
   id: string;
+  slNo?: number;
   nameMl: string;
   categoryMl: string;
   ratePlaceholder: string;
   descriptionMl?: string;
+  noteMl?: string;
 }
 
 export interface HistoricalEvent {

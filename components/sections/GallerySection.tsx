@@ -15,9 +15,8 @@ export default function GallerySection() {
   const categories = [
     { id: "all", nameMl: "എല്ലാം" },
     { id: "temple", nameMl: "ക്ഷേത്രം" },
-    { id: "rituals", nameMl: "പൂജാദൃശ്യങ്ങൾ" },
-    { id: "festivals", nameMl: "ആഘോഷങ്ങൾ" },
-    { id: "deity", nameMl: "ദേവസന്നിധി" },
+    { id: "festivals", nameMl: "ഉത്സവാഘോഷങ്ങൾ" },
+    { id: "rituals", nameMl: "പ്രസാദമൂട്ട് & അന്നദാനം" },
   ];
 
   const filteredImages =
@@ -54,8 +53,8 @@ export default function GallerySection() {
           ))}
         </div>
 
-        {/* 3-Column Asymmetric Masonry / Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+        {/* Multi-Column Responsive Masonry */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 [column-fill:_balance]">
           {filteredImages.map((image, index) => {
             const isTall = image.aspectRatio === "portrait";
 
@@ -67,8 +66,8 @@ export default function GallerySection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.06 }}
                 onClick={() => setLightboxIndex(index)}
-                className={`relative rounded-xl overflow-hidden shadow-subtle border border-temple-gold/25 cursor-pointer group bg-temple-sandal ${
-                  isTall ? "row-span-2 aspect-[3/4]" : "aspect-[4/3]"
+                className={`break-inside-avoid mb-5 relative rounded-2xl overflow-hidden shadow-subtle border border-temple-gold/30 cursor-pointer group bg-temple-sandal transition-all duration-300 hover:-translate-y-1 hover:shadow-card ${
+                  isTall ? "aspect-[3/4]" : "aspect-[4/3]"
                 }`}
               >
                 <Image
@@ -76,19 +75,19 @@ export default function GallerySection() {
                   alt={image.titleMl}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                  sizes="(max-width: 768px) 50vw, 33vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
 
                 {/* Dark Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-white">
                   <ZoomIn
-                    size={24}
+                    size={22}
                     className="text-temple-gold absolute top-4 right-4"
                   />
-                  <h4 className="font-serif font-bold text-sm sm:text-base text-temple-gold-light">
+                  <h4 className="font-serif font-bold text-base text-temple-gold-light mb-1">
                     {image.titleMl}
                   </h4>
-                  <p className="font-sans text-xs text-temple-sandal/80 line-clamp-1">
+                  <p className="font-sans text-xs text-temple-sandal/90 line-clamp-2 leading-relaxed">
                     {image.captionMl}
                   </p>
                 </div>
