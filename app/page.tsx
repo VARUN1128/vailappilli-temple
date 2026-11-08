@@ -4,7 +4,9 @@ import TempleHistorySection from "@/components/sections/TempleHistorySection";
 import CommitteeSection from "@/components/sections/CommitteeSection";
 import PoojaTimings from "@/components/sections/PoojaTimings";
 import VazhipaduSection from "@/components/sections/VazhipaduSection";
+import FestivalSection from "@/components/sections/FestivalSection";
 import GallerySection from "@/components/sections/GallerySection";
+import AnnouncementsSection from "@/components/sections/AnnouncementsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import MapSection from "@/components/sections/MapSection";
 import Footer from "@/components/sections/Footer";
@@ -18,7 +20,9 @@ export default function Home() {
       <CommitteeSection />
       <PoojaTimings />
       <VazhipaduSection />
+      <FestivalSection />
       <GallerySection />
+      <AnnouncementsSection />
       <ContactSection />
       <MapSection />
       <Footer />

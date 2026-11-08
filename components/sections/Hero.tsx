@@ -30,6 +30,19 @@ export default function Hero() {
 
       {/* Hero Content Box */}
       <div className="relative z-20 max-w-content mx-auto px-5 sm:px-8 lg:px-12 text-center flex flex-col items-center pt-16 sm:pt-20">
+        {/* Upcoming Festival Banner Pill */}
+        <motion.a
+          href="#festivals"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/50 text-amber-200 text-xs sm:text-sm font-sans font-semibold hover:bg-amber-500/30 transition-all shadow-sm group"
+        >
+          <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+          <span>തിരുവുത്സവം 2027: ജനുവരി 30 – ഫെബ്രുവരി 11 · വിശദവിവരങ്ങൾ</span>
+          <span className="text-amber-300 group-hover:translate-x-0.5 transition-transform">→</span>
+        </motion.a>
+
         {/* Sacred Devotional Line */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

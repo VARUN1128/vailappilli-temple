@@ -31,6 +31,7 @@ export interface Festival {
   programmes: string[];
   imageUrl?: string;
   isMainFestival?: boolean;
+  pdfUrl?: string;
 }
 
 export interface Vazhipadu {
@@ -67,6 +68,7 @@ export interface Announcement {
   descriptionMl: string;
   isImportant?: boolean;
   linkTextMl?: string;
+  linkUrl?: string;
 }
 
 export interface ContactInfo {

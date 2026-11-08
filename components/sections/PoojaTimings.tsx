@@ -19,6 +19,26 @@ export default function PoojaTimings() {
           subtitle="ഭക്തജനങ്ങൾക്ക് ദർശനത്തിനും വഴിപാടുകൾക്കുമായി ക്ഷേത്രനട തുറന്നിരിക്കുന്ന സമയങ്ങൾ"
         />
 
+        {/* Timings Quick Highlights */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-8">
+          <div className="p-5 rounded-2xl bg-white border border-temple-gold/40 shadow-subtle text-center">
+            <span className="font-sans text-xs uppercase tracking-wider text-temple-gold font-bold block mb-1">
+              പ്രഭാത ദർശനം
+            </span>
+            <p className="font-serif text-xl sm:text-2xl font-bold text-temple-maroon">
+              രാവിലെ 05:30 AM – 09:00 AM
+            </p>
+          </div>
+          <div className="p-5 rounded-2xl bg-white border border-temple-gold/40 shadow-subtle text-center">
+            <span className="font-sans text-xs uppercase tracking-wider text-temple-gold font-bold block mb-1">
+              സന്ധ്യാ ദർശനം
+            </span>
+            <p className="font-serif text-xl sm:text-2xl font-bold text-temple-maroon">
+              വൈകുന്നേരം 05:30 PM – 07:00 PM
+            </p>
+          </div>
+        </div>
+
         {/* CMS Notice / Timings Info Banner */}
         <div className="mb-12 max-w-2xl mx-auto p-4 rounded-xl bg-temple-sandal/50 border border-temple-gold/40 flex items-center gap-3 text-xs sm:text-sm font-sans text-temple-muted">
           <Info size={18} className="text-temple-maroon shrink-0" />
