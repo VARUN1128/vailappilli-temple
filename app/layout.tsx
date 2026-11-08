@@ -18,9 +18,13 @@ const notoSansMalayalam = Noto_Sans_Malayalam({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://vailappillykshethram.org")
+  ),
   title: "വൈലപ്പിള്ളി ശ്രീകൃഷ്ണസ്വാമി ക്ഷേത്രം | പെരുമ്പിള്ളി, എറണാകുളം",
   description:
-    "എറണാകുളം ജില്ലയിലെ മുളന്തുരുത്തി പെരുമ്പിള്ളി ഗ്രാമത്തിൽ സ്ഥിതിചെയ്യുന്ന പുരാതനമായ വൈലപ്പിള്ളി ശ്രീകൃഷ്ണസ്വാമി ക്ഷേത്രത്തിന്റെ ഔദ്യോഗിക വിവരങ്ങൾ. ദർശന സമയം, വഴിപാടുകൾ, പൂജാക്രമങ്ങൾ, വാർഷിക ഉത്സവവിശേഷങ്ങൾ.",
+    "എറണാകുളം ജില്ലയിലെ മുളന്തുരുത്തി പെരുമ്പിള്ളി ഗ്രാമത്തിൽ സ്ഥിതിചെയ്യുന്ന പുരാതനമായ വൈലപ്പിള്ളി ശ്രീകൃഷ്ണസ്വാമി ക്ഷേത്രത്തിന്റെ ഔദ്യോഗിക വിവരങ്ങൾ. ദർശന സമയം (രാവിലെ 5:30 - 9:00, വൈകിട്ട് 5:30 - 7:00), വഴിപാടുകൾ, പൂജാക്രമങ്ങൾ, വാർഷിക ഉത്സവവിശേഷങ്ങൾ.",
   keywords: [
     "വൈലപ്പിള്ളി ക്ഷേത്രം",
     "ശ്രീകൃഷ്ണസ്വാമി ക്ഷേത്രം",
@@ -42,18 +46,19 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1609766857041-ed402ea8069a?q=80&w=1200&auto=format&fit=crop",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "വൈലപ്പിള്ളി ശ്രീകൃഷ്ണസ്വാമി ക്ഷേത്രം",
+        alt: "വൈലപ്പിള്ളി ശ്രീകൃഷ്ണസ്വാമി ക്ഷേത്രം, പെരുമ്പിള്ളി",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "വൈലപ്പിള്ളി ശ്രീകൃഷ്ണസ്വാമി ക്ഷേത്രം",
+    title: "വൈലപ്പിള്ളി ശ്രീകൃഷ്ണസ്വാമി ക്ഷേത്രം | പെരുമ്പിള്ളി",
     description:
       "പെരുമ്പിള്ളി, മുളന്തുരുത്തി, എറണാകുളം - ഔദ്യോഗിക ആത്മീയ വിവരങ്ങൾ",
+    images: ["/og-image.png"],
   },
 };
 
@@ -80,8 +85,7 @@ export default function RootLayout({
       longitude: "76.37684",
     },
     url: "https://vailappillykshethram.org",
-    image:
-      "https://images.unsplash.com/photo-1609766857041-ed402ea8069a?q=80&w=1200&auto=format&fit=crop",
+    image: "https://vailappillykshethram.org/og-image.png",
   };
 
   return (
